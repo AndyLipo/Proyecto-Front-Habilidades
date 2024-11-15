@@ -70,7 +70,7 @@ nav a:hover {
         display: none; /* Oculta el menú en pantallas pequeñas */
         flex-direction: column;
         position: absolute;
-        top: 45px;
+        top: 58px;
         left: 125px;
         background-color: rgba(0, 0, 0, 0.377);
         padding: 1rem;
