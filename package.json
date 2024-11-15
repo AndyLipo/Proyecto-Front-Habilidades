@@ -1,0 +1,16 @@
+{
+  "name": "front-agencia-tp",
+  "version": "1.0.0",
+  "description": "Este proyecto es una plataforma web diseñada para la venta de productos, utilizando HTML, CSS y la integración con **Formspree** para la gestión de formularios. El diseño es completamente **responsive**, lo que garantiza una experiencia de usuario óptima en dispositivos móviles y de escritorio.",
+  "main": "index.js",
+  "scripts": {
+    "build": "html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o ./dist/index.html ./index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-minifier": "^4.0.0"
+  }
+}
