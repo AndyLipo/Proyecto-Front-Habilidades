@@ -8,20 +8,27 @@
     <link rel="shortcut icon" href="/logo-Photoroom.png" type="image/x-icon">
     <title>TiendaTech || Proyecto</title>
 </head>
-<body>
-    <header>
-        <a><img src="/logo.png"/></a>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+<body class="text-light">
+    <header class="navbar p-3 navbar-toggler navbar-collapse">
+        <a href="/" class="navbar-brand">
+            <img src="/logo.png" alt="Logo" style="height: 40px;">
+        </a>
         <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#reseñas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <ul class="justify-content-center list-unstyled m-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Html/Productos.html" style="color: white;">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white;">Reseñas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white;">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-cart4 fs-2" style="color: white;"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
