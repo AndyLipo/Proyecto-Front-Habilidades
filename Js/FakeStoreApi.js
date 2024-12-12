@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.id = 'cartModal';
         modal.innerHTML = `
             <div class="modal-dialog">
-                <div class="modal-content" style="color: black;">
+                <div class="modal-content" >
                     <div class="modal-header">
                         <h5 class="modal-title">Carrito de Compras</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
