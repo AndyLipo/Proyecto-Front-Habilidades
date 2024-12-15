@@ -64,6 +64,7 @@ nav a:hover {
 
 .bi, .bi-cart4{
     color: white;
+    position: relative;
 
 }
 .productos-container {
@@ -257,6 +258,24 @@ nav ul {
     color: #ffffff;
 
 }
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    height: 20px;
+  }
 
 /* Reseñas organizadas con Grid */
 .reseñas-grid {
