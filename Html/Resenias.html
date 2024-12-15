@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TiendaTech, tu tienda de tecnología confiable. Encuentra productos de alta calidad como computadoras, smartphones y accesorios.">
+    <meta name="keywords" content="tecnología, computadoras, smartphones, accesorios, tienda online">
+    <meta name="author" content="TiendaTech">
     <link rel="stylesheet" href="/Css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/logo-Photoroom.png" type="image/x-icon">
     <title>TiendaTech || Proyecto</title>
 </head>
 <body>
@@ -11,7 +16,7 @@
         <a href="/" class="navbar-brand">
             <img src="/logo.png" alt="Logo" style="height: 40px;">
         </a>
-        <nav>
+        <nav role="navigation">
             <ul class="justify-content-center list-unstyled m-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/Html/Productos.html" style="color: white;">Productos</a>
@@ -21,7 +26,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Html/Contacto.html" style="color: white;">Contacto</a>
-                </li>
+                </li>   
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-cart4 fs-2" style="color: white;"></i>
@@ -30,15 +35,72 @@
             </ul>
         </nav>
     </header> 
-    <main>
-        <section>
-            <div class="container my-5">
-                <div id="reviews" class="grid-container">
+    <main role="main">
+        <section class="grid-section">
+            <div class="container">
+                <div id="reviews" class="reviews-container">
                     <!-- Las reseñas se insertarán aquí -->
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer" role="contentinfo">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h5>Productos</h5>
+                <ul>
+                    <li><a href="#">Computadoras</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Servicios</h5>
+                <ul>
+                    <li><a href="#">Soporte Técnico</a></li>
+                    <li><a href="#">Reparaciones</a></li>
+                    <li><a href="#">Garantías</a></li>
+                    <li><a href="#">Instalaciones</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Empresa</h5>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Sucursales</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Atención al Cliente</h5>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Seguimiento de Pedidos</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Síguenos</h5>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2024 TiendaTech. Todos los derechos reservados.</p>
+            <div class="footer__legal">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
 
 <script src="/Js/Main.js"></script>
 </body>

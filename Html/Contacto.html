@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TiendaTech, tu tienda de tecnología confiable. Encuentra productos de alta calidad como computadoras, smartphones y accesorios.">
+    <meta name="keywords" content="tecnología, computadoras, smartphones, accesorios, tienda online">
+    <meta name="author" content="TiendaTech">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/logo-Photoroom.png" type="image/x-icon">
+    <title>TiendaTech || Proyecto</title>
+</head>
+<body>
+    <header class="p-3">
+        <a href="/" class="navbar-brand">
+            <img src="/logo.png" alt="Logo" style="height: 40px;">
+        </a>
+        <nav  role="navigation">
+            <ul class="justify-content-center list-unstyled ">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Html/Productos.html" style="color: white;">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Html/Resenias.html" style="color: white;">Reseñas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Html/Contacto.html" style="color: white;">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contact-page" class="justify-content-center flex-wrap">
+        <section id="contact-header" class="header-section">
+            <h1>Contacto</h1>
+            <p>¡Nos encantaría saber de ti! Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+        </section>
+        <section id="contact-map" class="location-section">
+            <h2>Ubicación</h2>
+            <div class="location-container">
+                <div class="location-info">
+                    <div class="location-details">
+                        <h3>Cómo Llegar</h3>
+                        <p>Nuestra tienda está ubicada en el corazón de la ciudad, de fácil acceso mediante transporte público.</p>
+                        
+                        <h4>Líneas de Colectivo</h4>
+                        <ul>
+                            <li>Línea 10: Parada directa frente a la tienda</li>
+                            <li>Línea 25: A dos cuadras de nuestra ubicación</li>
+                            <li>Línea 37: Parada a media cuadra</li>
+                            <li>Línea 74: Parada cercana sobre avenida principal</li>
+                        </ul>
+                        
+                        <h4>Horarios de Atención</h4>
+                        <div class="store-hours">
+                            <p>Lunes a Viernes: 9:00 AM - 8:00 PM</p>
+                            <p>Sábados: 10:00 AM - 6:00 PM</p>
+                            <p>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434508436!2d-122.41941548468145!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f5f7d97d%3A0x4dd23f8f53b98b7b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2ses!4v1700000000000" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section id="contacto" aria-labelledby="contacto-heading">
+            <span class="contacto">
+                <h2 id="contacto-heading" class="contacto-title">Formulario de Contacto</h2>
+            </span>
+            <div class="form">
+                <form action="https://formspree.io/f/meoqkrnv" method="POST">
+                    <div class="form__group">
+                        <label for="nombre" class="form__label">Tu Nombre</label>
+                        <input type="text" id="nombre" name="name" placeholder="Tu Nombre" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label">Tu Email</label>
+                        <input type="email" id="email" name="email" placeholder="Tu Email" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="mensaje" class="form__label">Deja un mensaje</label>
+                        <textarea id="mensaje" name="message" placeholder="Deja un mensaje" class="form__textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="form__button">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+      
+    </main>
+    <footer class="footer" role="contentinfo">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h5>Productos</h5>
+                <ul>
+                    <li><a href="#">Computadoras</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Servicios</h5>
+                <ul>
+                    <li><a href="#">Soporte Técnico</a></li>
+                    <li><a href="#">Reparaciones</a></li>
+                    <li><a href="#">Garantías</a></li>
+                    <li><a href="#">Instalaciones</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Empresa</h5>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Sucursales</a></li>
+                    <li><a href="#">Trabaja con Nosotros</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Atención al Cliente</h5>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Política de Devolución</a></li>
+                    <li><a href="#">Seguimiento de Pedidos</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h5>Síguenos</h5>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2024 TiendaTech. Todos los derechos reservados.</p>
+            <div class="footer__legal">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

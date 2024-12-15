@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TiendaTech, tu tienda de tecnología confiable. Encuentra productos de alta calidad como computadoras, smartphones y accesorios.">
+    <meta name="keywords" content="tecnología, computadoras, smartphones, accesorios, tienda online">
+    <meta name="author" content="TiendaTech">
     <link rel="stylesheet" href="/Css/Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/logo-Photoroom.png" type="image/x-icon">
     <title>TiendaTech || Proyecto</title>
 </head>
-<body class="text-light">
-    <header class="navbar p-3 navbar-toggler navbar-collapse">
+<body>
+    <header class="p-3">
         <a href="/" class="navbar-brand">
             <img src="/logo.png" alt="Logo" style="height: 40px;">
         </a>
-        <nav>
+        <nav role="navigation">
             <ul class="justify-content-center list-unstyled m-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/Html/Productos.html" style="color: white;">Productos</a>
@@ -23,7 +27,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Html/Contacto.html" style="color: white;">Contacto</a>
-                </li>
+                </li>   
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-cart4 fs-2" style="color: white;"></i>
@@ -31,119 +35,100 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </header> 
 
     <main>
         <section id="inicio">
             <h2>Bienvenidos a TiendaTech</h2>
-            <p>Aca encontrarán una tienda de compra.</p>
+            <p>Aquí encontrarán una tienda de compra.</p>
         </section>
 
-        <section id="productos">
+        <section id="productos" aria-labelledby="productos-heading">
             <span class="productos">
-                <h2 class="productos-titulo">Nuestros Productos</h2>
+                <h2 id="productos-heading" class="productos-titulo">Nuestros Productos</h2>
             </span>
             <div class="productos-container">
+                <!-- Card 1 -->
                 <div class="card">
-                    <a href="#!" class="card-image-link">
-                        <img class="card-image" src="https://images.unsplash.com/photo-1630096711968-d118c17a173a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <a href="#!" class="card-image-link" aria-label="Más información sobre el teclado">
+                        <img class="card-image" src="https://images.unsplash.com/photo-1630096711968-d118c17a173a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Teclado RGB de alto rendimiento" />
                     </a>
                     <div class="card-body">
-                    <h5 class="card-title">Mejora tu Configuración con Precisión y Estilo</h5>
-                    <p class="card-text">
-                        Descubre la experiencia de tipeo definitiva con nuestro teclado de alto rendimiento, que cuenta con iluminación RGB personalizable y teclas ultra sensibles. Ideal tanto para gamers como para creadores, este teclado combina un diseño elegante con una funcionalidad avanzada. ¡Lleva tu espacio de trabajo o estación de juego al siguiente nivel!
-                    </p>
-                    <button href="#" class="card-button">Comprar ahora</button>
+                        <h5 class="card-title">Mejora tu Configuración con Precisión y Estilo</h5>
+                        <p class="card-text">
+                            Descubre la experiencia de tipeo definitiva con nuestro teclado de alto rendimiento, que cuenta con iluminación RGB personalizable y teclas ultra sensibles.
+                        </p>
+                        <button class="card-button" aria-label="Comprar teclado RGB">Comprar ahora</button>
                     </div>
                 </div>
+                <!-- Card 2 -->
                 <div class="card">
-                    <a href="#!" class="card-image-link">
-                        <img class="card-image" src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXVyaWN1bGFyZXMlMjBpbmFsYW1icmljb3N8ZW58MHx8MHx8fDA%3D" alt="" />
+                    <a href="#!" class="card-image-link" aria-label="Más información sobre los auriculares">
+                        <img class="card-image" src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXVyaWN1bGFyZXMlMjBpbmFsYW1icmljb3N8ZW58MHx8MHx8fDA%3D" alt="Auriculares de alta fidelidad con cancelación de ruido" />
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Sumérgete en el Sonido como Nunca Antes</h5>
                         <p class="card-text">
-                            Experimenta cada nota y cada detalle con nuestros auriculares de alta fidelidad, diseñados para brindar una experiencia de sonido envolvente y profunda. Con cancelación de ruido avanzada y un ajuste cómodo, estos auriculares son perfectos tanto para disfrutar de tu música favorita como para concentrarte sin distracciones.
+                            Experimenta cada nota y detalle con nuestros auriculares de alta fidelidad, diseñados para brindar una experiencia de sonido envolvente y profunda.
                         </p>
-                        <button href="#" class="card-button">Comprar ahora</button>
+                        <button class="card-button" aria-label="Comprar auriculares de alta fidelidad">Comprar ahora</button>
                     </div>
                 </div>
+                <!-- Card 3 -->
                 <div class="card">
-                    <a href="#!" class="card-image-link">
-                        <img class="card-image" src="https://images.unsplash.com/photo-1623820919239-0d0ff10797a1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <a href="#!" class="card-image-link" aria-label="Más información sobre el mouse ergonómico">
+                        <img class="card-image" src="https://images.unsplash.com/photo-1623820919239-0d0ff10797a1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse ergonómico de alta precisión" />
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Precisión y Confort en Cada Movimiento</h5>
                         <p class="card-text">
-                            Lleva tu productividad y juego al siguiente nivel con nuestro mouse ergonómico de alta precisión. Su diseño avanzado te proporciona control total y comodidad durante largas horas, ya sea en el trabajo o en el juego.
+                            Lleva tu productividad y juego al siguiente nivel con nuestro mouse ergonómico de alta precisión.
                         </p>
-                        <button href="#" class="card-button">Comprar ahora</button>
+                        <button class="card-button" aria-label="Comprar mouse ergonómico">Comprar ahora</button>
                     </div>
                 </div>
-                <!-- Agrega más cards aquí -->
-            </div>             
+            </div>
         </section>
 
-        <section id="reseñas" class="testimonials">
+        <section id="reseñas" class="testimonials" aria-labelledby="reseñas-heading">
             <span class="testimonial-container">
-                <h2 class="testimonial-title">Nuestros Clientes Dicen</h2>
+                <h2 id="reseñas-heading" class="testimonial-title">Nuestros Clientes Dicen</h2>
             </span>
             <div class="testimonial-cards">
-              <!-- Card 1 -->
-              <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?crop=faces&fit=crop&h=100&w=100" alt="María García" class="testimonial-img" />
-                <h3>Juan García</h3>
-                <p class="position">CEO, Compañía ABC</p>
-                <p class="review">
-                  "La experiencia fue increíble, su equipo es muy profesional y realmente se preocupan por los detalles. Definitivamente lo recomendaría a mis colegas."
-                </p>
-              </div>
-              <!-- Card 2 -->
-              <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?crop=faces&fit=crop&h=100&w=100" alt="Juan Pérez" class="testimonial-img" />
-                <h3>Rafael Pérez</h3>
-                <p class="position">Director, Empresa XYZ</p>
-                <p class="review">
-                  "Su servicio superó mis expectativas, el producto final fue excelente y el proceso fue realmente sencillo. ¡Gracias!"
-                </p>
-              </div>
-              <!-- Card 3 -->
-              <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?crop=faces&fit=crop&h=100&w=100" alt="Luisa Fernández" class="testimonial-img" />
-                <h3>Luis Fernández</h3>
-                <p class="position">Fundador, Innovate</p>
-                <p class="review">
-                  "Gran equipo, muy receptivo y profesional. La calidad del servicio y la atención al cliente fueron excepcionales."
-                </p>
-              </div>
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?crop=faces&fit=crop&h=100&w=100" alt="Foto de perfil de Juan García" class="testimonial-img" />
+                    <h3>Juan García</h3>
+                    <p class="position">CEO, Compañía ABC</p>
+                    <p class="review">
+                        "La experiencia fue increíble, su equipo es muy profesional y realmente se preocupan por los detalles."
+                    </p>
+                </div>
+                <!-- Más testimonios -->
             </div>
-          </section>
-          
+        </section>
 
-        <section id="contacto">
+        <section id="contacto" aria-labelledby="contacto-heading">
             <span class="contacto">
-                <h2 class="contacto-title">Contacto</h2>
+                <h2 id="contacto-heading" class="contacto-title">Contacto</h2>
             </span>
             <div class="form">
                 <form action="https://formspree.io/f/meoqkrnv" method="POST">
-                  <div class="form__group">
-                    <label for="86f2a080-867d-4d48-b911-c329c1abad45" class="form__label">Tu Nombre</label>
-                    <input type="text" id="86f2a080-867d-4d48-b911-c329c1abad45" name="name" placeholder="Tu Nombre" class="form__input" required>
-                  </div>
-            
-                  <div class="form__group">
-                    <label for="2e44f8b3-e4ac-4f2e-835f-cc2078a79efd" class="form__label">Tu Email</label>
-                    <input type="email" id="2e44f8b3-e4ac-4f2e-835f-cc2078a79efd" name="email" placeholder="Tu Email" class="form__input" required>
-                  </div>
-            
-                  <div class="form__group">
-                    <label for="a1be1f4a-65dc-4de3-a2a0-afc4c873bd19" class="form__label">Deja un mensaje</label>
-                    <textarea id="a1be1f4a-65dc-4de3-a2a0-afc4c873bd19" name="message" placeholder="Deja un mensaje" class="form__textarea" required></textarea>
-                  </div>
-            
-                  <button type="submit" class="form__button">Enviar</button>
+                    <div class="form__group">
+                        <label for="nombre" class="form__label">Tu Nombre</label>
+                        <input type="text" id="nombre" name="name" placeholder="Tu Nombre" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label">Tu Email</label>
+                        <input type="email" id="email" name="email" placeholder="Tu Email" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="mensaje" class="form__label">Deja un mensaje</label>
+                        <textarea id="mensaje" name="message" placeholder="Deja un mensaje" class="form__textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="form__button">Enviar</button>
                 </form>
-              </div>
+            </div>
         </section>
     </main>
 
@@ -202,11 +187,13 @@
                 <a href="#">Política de Privacidad</a>
                 <a href="#">Política de Cookies</a>
             </div>
+        <div class="footer__bottom">
+            <p>© 2024 TiendaTech. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-</body>
-<script src="/Js/Main.js"></script>
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script src="/Js/Main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
 </body>
 </html>

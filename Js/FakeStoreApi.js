@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productsContainer = document.querySelector('.productos-container');
     const cartIcon = document.querySelector('.bi-cart4');
-    const cartModal = createCartModal();
 
     // Cart state
     let cart = {
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 product.category === "electronics"
             );
 
-            // Limit to 3 products
+            // Limit to 9 products
             electronicProducts.slice(0, 9).forEach(product => {
                 const card = createProductCard(product);
                 productsContainer.appendChild(card);

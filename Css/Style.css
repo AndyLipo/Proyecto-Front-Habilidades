@@ -30,8 +30,8 @@ a img {
 }
 
 nav {
-    position: static;
-    width: 100%;
+    width: auto; /* Changed from 100% */
+    flex-grow: 1;
 }
 .navbar {
     position: relative;
@@ -49,6 +49,7 @@ nav ul {
     align-items:center;
     gap: 1rem;
     width: 100%; /* Asegura que ocupe todo el ancho */
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -432,19 +433,7 @@ nav ul {
     transform: translateY(0);
 }
 
-/* Media Query para dispositivos móviles */
-/* @media (max-width: 480px) {
-    .form {
-        width: 95%;
-        padding: 20px;
-        margin: 20px auto;
-    }
 
-    .form__button {
-        width: 80%; /* En móvil el botón es más ancho pero no al 100% 
-        min-width: auto;
-    }
-} */
 /* Media Query específico para 320px */
 @media (max-width: 320px) {
     .form {
@@ -534,41 +523,254 @@ nav ul {
 }
 
 /* Reseñas */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+ .grid-section{
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .review-card {
-    background: #fff;
-    border: 1px solid #dee2e6;
+    background-color: #f4f4f4;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.review-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.review-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.review-email {
-    font-size: 0.9rem;
-    color: #6c757d;
+.review-header {
+    display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.review-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.review-email {
+    color: #666;
+    font-size: 0.9rem;
+}
+
 .review-body {
-    font-size: 1rem;
-    color: #495057;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/*Contacto*/
+
+
+#contact-header {
+    margin-top: 80px;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#contact-header h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#contact-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Location Section */
+.location-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.location-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.location-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.location-info {
+    flex: 1;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.location-details h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.location-details h4 {
+    color: #34495e;
+    margin-top: 1rem;
+}
+
+.location-details ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.store-hours {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.location-map {
+    flex: 1;
+}
+
+.location-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* Additional styles to maintain layout */
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+/* Media Queries for Contact Page */
+@media screen and (max-width: 576px) {
+    #contact-map {
+        padding: 1rem 0.5rem;
+    }
+
+    #contact-header h1 {
+        font-size: 1.8rem;
+    }
+
+    #contact-header p {
+        font-size: 0.9rem;
+    }
+
+    /* New location section styles for small screens */
+    .location-container {
+        flex-direction: column;
+    }
+
+    .location-info,
+    .location-map {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .location-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .location-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .location-details h4 {
+        font-size: 1.2rem;
+    }
+
+    .location-details ul,
+    .store-hours p {
+        font-size: 0.9rem;
+    }
+
+    .location-map iframe {
+        height: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #contact-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-container {
+        flex-direction: column;
+    }
+
+    .location-info,
+    .location-map {
+        width: 90%;
+        margin: 0 auto 1rem;
+    }
+
+    .location-section h2 {
+        font-size: 2rem;
+    }
+
+    .location-map iframe {
+        height: 300px;
+    }
+
+    .location-details h3 {
+        font-size: 1.6rem;
+    }
+
+    .location-details h4 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 993px) {
+    #contact-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .location-info,
+    .location-map {
+        width: 48%; /* Slightly less than 50% to account for gap */
+    }
+
+    .location-map iframe {
+        height: 350px;
+    }
+}
+/* Responsive Text Sizing */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
 }
 
 /* Media query para responsive */
@@ -612,58 +814,61 @@ nav ul {
         grid-template-columns: 1fr;
     }
 }
-@media (max-width: 320px) {
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar-brand {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+    }
+
     .nav-item .nav-link,
     .nav-item .nav-link.active {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-        justify-content: center;
-        margin-top: -35px;
-        font-size: 0.65rem !important; 
-       
+        font-size: 0.75rem !important;
+        margin: 0;
     }
-    
-    .nav-item .bi-cart4 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-        justify-content: center;
-        font-size: 0.65rem !important; 
-    }
-} 
 
-
-/* Breakpoint para tablets y dispositivos móviles grandes */
-@media (min-width: 992px) {
-    .nav-item .nav-link,
-    .nav-item .nav-link.active {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-        justify-content: center;
-        margin-top: 15px;
-        font-size: 0.875rem !important; /* Reducir el tamaño del texto */
-    }
-    
     .nav-item .bi-cart4 {
-        font-size: 1.5rem !important; /* Reducir el tamaño del icono */
+        font-size: 1rem !important;
     }
 }
 
-/* Breakpoint para dispositivos móviles medianos */
-@media (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 992px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
     .nav-item .nav-link,
     .nav-item .nav-link.active {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-        justify-content: center;
-        margin-top: -35px;
-        font-size: 0.75rem !important; /* Reducir aún más el texto */
+        font-size: 0.85rem !important;
     }
-    
+
     .nav-item .bi-cart4 {
-        font-size: 1.25rem !important; /* Reducir más el tamaño del icono */
+        font-size: 1.25rem !important;
     }
 }
