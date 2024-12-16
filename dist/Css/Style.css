@@ -7,12 +7,11 @@ body {
 }
 
 /* Estilos base para el header */
-/* Estilos base para el header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(26, 26, 26, 0.9); /* Mismo tono del footer pero con transparencia */
+    background-color: rgba(26, 26, 26, 0.9);
     color: white;
     padding: 1rem 2rem;
     position: fixed;
@@ -27,83 +26,72 @@ header {
 }
 
 a img {
-    text-decoration: none;
     height: 40px;
 }
 
 nav {
-    display: flex;
-    justify-content: center; /* Centers the nav items horizontally */
-    width: 100%;
+    width: auto; /* Changed from 100% */
+    flex-grow: 1;
 }
+.navbar {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(26, 26, 26, 0.9);
+}
+
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 0.75rem;
-    align-items: center; /* Centers items vertically within the nav */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items:center;
+    gap: 1rem;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: #b3b3b3; /* Mismo color de los enlaces del footer */
+    color: #b3b3b3;
     transition: color 0.3s ease;
     text-decoration: none;
 }
+
 nav a:hover {
-    color: #00b4d8; /* Azul tecnológico al hacer hover */
+    color: #00b4d8;
 }
 
+.bi, .bi-cart4{
+    color: white;
+    position: relative;
 
-/* Estilos responsive */
-@media (max-width: 320px) {
-    header {
-        padding: 0.5rem 1rem;
-        width: 86%; /* Ancho más angosto en responsive */
-        left: 1%; /* Centrado horizontalmente */
-        
-    }
-
-
-    nav ul {
-        display: none; /* Oculta el menú en pantallas pequeñas */
-        flex-direction: column;
-        position: absolute;
-        top: 58px;
-        left: 125px;
-        background-color: rgba(0, 0, 0, 0.377);
-        padding: 1rem;
-        border-radius: 8px;
-        font-size: 0.7rem; /* Tamaño reducido para h1 en responsive */
-        width: 50%; /* Ajusta el ancho del menú */
-        gap: 1rem; /* Más espacio entre elementos */
-    }
-
-    .menu-icon {
-        display: inline-block;
-        cursor: pointer;
-        padding-left: 180px;
-    }
-
-    .menu-icon span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 5px 0;
-        transition: 0.4s;
-    }
-    
 }
-
-/* Muestra el menú al hacer clic en el ícono de menú */
-.show-menu nav ul {
+.productos-container {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
 
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
 
 /* Fondo en la sección inicio */
 #inicio {
@@ -269,6 +257,56 @@ nav a:hover {
     text-align: center;
     color: #ffffff;
 
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    height: 20px;
+  }
+
+  .cart-item-row {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cart-item-image {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border-radius: 4px;
+}
+
+.quantity-input {
+    max-width: 60px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cart-item-row {
+        flex-direction: column;
+    }
+
+    .cart-item-title {
+        margin-top: 0.5rem;
+    }
+
+    .quantity-input {
+        width: 50px;
+    }
 }
 
 /* Reseñas organizadas con Grid */
@@ -446,19 +484,7 @@ nav a:hover {
     transform: translateY(0);
 }
 
-/* Media Query para dispositivos móviles */
-/* @media (max-width: 480px) {
-    .form {
-        width: 95%;
-        padding: 20px;
-        margin: 20px auto;
-    }
 
-    .form__button {
-        width: 80%; /* En móvil el botón es más ancho pero no al 100% 
-        min-width: auto;
-    }
-} */
 /* Media Query específico para 320px */
 @media (max-width: 320px) {
     .form {
@@ -547,6 +573,257 @@ nav a:hover {
     color: #00b4d8;
 }
 
+/* Reseñas */
+ .grid-section{
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.review-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.review-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.review-email {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.review-body {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/*Contacto*/
+
+
+#contact-header {
+    margin-top: 80px;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#contact-header h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#contact-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Location Section */
+.location-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.location-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.location-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.location-info {
+    flex: 1;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.location-details h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.location-details h4 {
+    color: #34495e;
+    margin-top: 1rem;
+}
+
+.location-details ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.store-hours {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.location-map {
+    flex: 1;
+}
+
+.location-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* Additional styles to maintain layout */
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+/* Media Queries for Contact Page */
+@media screen and (max-width: 576px) {
+    #contact-map {
+        padding: 1rem 0.5rem;
+    }
+
+    #contact-header h1 {
+        font-size: 1.8rem;
+    }
+
+    #contact-header p {
+        font-size: 0.9rem;
+    }
+
+    /* New location section styles for small screens */
+    .location-container {
+        flex-direction: column;
+    }
+
+    .location-info,
+    .location-map {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .location-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .location-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .location-details h4 {
+        font-size: 1.2rem;
+    }
+
+    .location-details ul,
+    .store-hours p {
+        font-size: 0.9rem;
+    }
+
+    .location-map iframe {
+        height: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    #contact-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-container {
+        flex-direction: column;
+    }
+
+    .location-info,
+    .location-map {
+        width: 90%;
+        margin: 0 auto 1rem;
+    }
+
+    .location-section h2 {
+        font-size: 2rem;
+    }
+
+    .location-map iframe {
+        height: 300px;
+    }
+
+    .location-details h3 {
+        font-size: 1.6rem;
+    }
+
+    .location-details h4 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 993px) {
+    #contact-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .location-info,
+    .location-map {
+        width: 48%; /* Slightly less than 50% to account for gap */
+    }
+
+    .location-map iframe {
+        height: 350px;
+    }
+}
+/* Responsive Text Sizing */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
 /* Media query para responsive */
 @media (max-width: 768px) {
     .footer__section {
@@ -583,10 +860,66 @@ nav a:hover {
 }
 
 @media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
+  
     .productos-container {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar-brand {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-item .nav-link,
+    .nav-item .nav-link.active {
+        font-size: 0.75rem !important;
+        margin: 0;
+    }
+
+    .nav-item .bi-cart4 {
+        font-size: 1rem !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .nav-item .nav-link,
+    .nav-item .nav-link.active {
+        font-size: 0.85rem !important;
+    }
+
+    .nav-item .bi-cart4 {
+        font-size: 1.25rem !important;
     }
 }
