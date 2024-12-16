@@ -5,7 +5,7 @@ Este proyecto es una plataforma web diseñada para la venta de productos, utiliz
 ## Tecnologías Utilizadas
 
 - **HTML**: Estructura básica de la página.
-- **CSS**: Estilos y diseño visual del sitio, adaptado para diferentes tamaños de pantalla mediante **media queries**.
+- **CSS**: Estilos y diseño visual del sitio, adaptado para diferentes tamaños de pantalla mediante **media queries** y **bootstrap**.
 - **Formspree**: Servicio de gestión de formularios para enviar datos sin necesidad de un backend.
 
 ## Características
